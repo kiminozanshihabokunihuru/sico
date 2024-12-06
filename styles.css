@@ -1,0 +1,93 @@
+body {
+    font-family: 'Quicksand', serif;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text for readability */
+}
+
+.header {
+    display: flex; /* Makes it a flex container */
+    align-items: center; /* Vertically aligns items */
+    justify-content: center; /* Centers items horizontally */
+    text-align: center;
+    padding-top: 2%;
+    color: #e0e0e0;
+}
+
+.header img {
+    height: 60px; /* Adjust size as needed */
+    margin-right: 15px; /* Space between the logo and the title */
+}
+
+.header .username {
+    margin: 0;
+}
+
+.username {
+    font-family: 'Marck Script', serif;
+    font-size: 60px;
+    color: #ffd4e9;
+}
+
+.line {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, #444444, #666666, #444444); /* Darker gradient for the line */
+    background-image: -moz-linear-gradient(left, #444444, #666666, #444444);
+    background-image: -ms-linear-gradient(left, #444444, #666666, #444444);
+    background-image: -o-linear-gradient(left, #444444, #666666, #444444);
+}
+
+
+
+
+a:hover {
+    text-decoration: none;
+    color: #ffd4e9; /* Accent color on hover */
+}
+
+a {
+    color: #bbbbbb; /* Lighter link color for dark theme */
+}
+
+ul {
+    list-style-type: disc;
+    padding: 0; /* Removes default padding from the list */
+    margin: 0; /* Removes default margin from the list */
+}
+  
+.portfolio-item {
+    margin: 5px 0; /* Adjust spacing between list items */
+    position: relative; /* Ensures hover images position correctly */
+}
+  
+.portfolio-item a:hover::after {
+    content: '';
+    position: absolute;
+    top: 30px; /* Adjust vertical position */
+    left: 0; /* Adjust horizontal position */
+    z-index: 10; /* Ensures the image appears on top */
+    border: 1px solid #ccc; /* Optional: border for the image */
+    padding: 5px; /* Optional: padding around the image */
+    background-size: cover; /* Ensure the image covers the box */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+  
+  /* Add specific images and dimensions for each link */
+.portfolio-item:nth-child(1) a:hover::after {
+    background-image: url("LabExercise.png");
+    width: 452.5px; /* Custom width for this image */
+    height: 336.5px; /* Custom height for this image */
+}
+  
+.portfolio-item:nth-child(2) a:hover::after {
+    background-image: url("Infographic.jpg");
+    width: 200px; /* Custom width for this image */
+    height: 500px; /* Custom height for this image */
+}
+  
+.portfolio-item:nth-child(3) a:hover::after {
+    background-image: url("EmployeeDatabase.png");
+    width: 436.66px; /* Custom width for this image */
+    height: 226.33px; /* Custom height for this image */
+}
